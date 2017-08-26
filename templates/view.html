@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vibration</title>
+</head>
+<body>
+<form action="" method="post">
+  <table>
+    {% for field in form %}
+    <tr>
+      <td>{{field.name}} </td>
+      <td>{{field}}</td>
+      <td>
+        {{field.label}}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p>
+    <input type="submit" value="Compute">
+  </p>
+</form>
+
+<p>
+  {% if result is not none %}
+  <img src="{{result}}" alt="" width="500">
+</p>
+{% endif %}
+</body>
+</html>
